@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NsbProject</title>
+    <title><%= yield(:title) %> | NSB_Territory</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,19 @@
   </head>
 
   <body>
+    <div class="row">
+  <div class="col-sm-3" style="padding-left: 0px;
+    padding-right: 0px;">
+    <%= render "layouts/tab_left" %>
+  </div>
+  <div class="col-sm-6" style="padding-left: 0px;
+    padding-right: 0px;">
     <%= yield %>
+  </div>
+  <div class="col-sm-3" style="padding-left: 0px;
+    padding-right: 0px;">
+    <%= render "layouts/tab_right" %>
+  </div>
+    </div>
   </body>
 </html>
