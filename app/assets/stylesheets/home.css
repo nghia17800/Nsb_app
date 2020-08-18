@@ -1,0 +1,39 @@
+.home {
+  width: 99%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: #DCDCDC;
+}
+.header img {
+  margin-left: 19%;
+}
+#menu ul {
+  background: #1F568B;
+  list-style-type: none;
+  text-align: center;
+}
+#menu ul li {
+  color: #f1f1f1;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+  position: relative;
+}
+#menu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+#menu a:hover {
+  background: #F1F1F1;
+  color: #333;
+}
+#menu ul li > .sub-menu {
+  display: none;
+  position: absolute;
+}
+#menu ul li:hover .sub-menu {
+  display: block;
+}
