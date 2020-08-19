@@ -1,3 +1,4 @@
+<% provide :title, "Đăng Kí" %>
 <div class="home">
 
 <%= render "static_pages/header" %>
@@ -8,6 +9,10 @@
   <%= render "devise/shared/error_messages", resource: resource %>
     <%= f.label :email %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+    <%= f.label :gender %>
+    <%= f.select(:gender, options_for_select(User.genders.keys)) %><br>
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>

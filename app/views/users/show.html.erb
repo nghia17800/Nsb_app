@@ -1,0 +1,24 @@
+<% provide :title, "Tài Khoản" %>
+<div class="home">
+<%= render "static_pages/header" %>
+<h2>Thông tin tài khoản</h2>
+<div class="show-user">
+  <% if @user.avatar.present? %>
+    <%= image_tag(@user.avatar.url) %>
+  <% else %>
+    <img src="https://png.pngtree.com/png-vector/20191110/ourlarge/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg" height="235" width="235">
+    <%= link_to "Edit", edit_user_registration_path , class: "btn btn-primary" %>
+  <% end %>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+      <h5><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbspEmail: <%= @user.email %></h5>
+      <h5><i class="fa fa-transgender-alt" aria-hidden="true"></i>&nbspGender: <%= @user.gender %></h5>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+      <h5><i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbspName: <%= @user.name %></h5>
+    </div>
+  </div>
+</div>
+</div>

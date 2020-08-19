@@ -1,6 +1,6 @@
 <div class="header">
   <%= link_to root_path do %>
-     <%= image_tag "http://r72.cooltext.com/d.php?renderid=360014157722210&extension=png" %>
+     <%= image_tag "http://r73.cooltext.com/d.php?renderid=360101678520203&extension=png" %>
   <% end %>
   <div id="menu">
     <ul>
@@ -13,7 +13,7 @@
         </ul>
       </li>
       <% if user_signed_in? %>
-        <li><%= link_to "Tài Khoản", "#" %></li>
+        <li><%= link_to "Tài Khoản", user_path(current_user) %></li>
         <li><%= link_to "Đăng Xuất", destroy_user_session_path %></li>
       <% else %>
         <li><%= link_to "Đăng Kí", new_user_registration_path %></li>
