@@ -1,0 +1,14 @@
+.show-user img {
+  margin-left: 31%;
+}
+.show-user {
+  background-color: #fff;
+  width: 96%;
+  margin-left: 2%;
+  border-radius: 10px;
+}
+.show-user a {
+  margin-left: 22%;
+  margin-bottom: 32%;
+  border-radius: 0px 10px 0px 0px;
+}
