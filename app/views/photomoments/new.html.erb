@@ -1,0 +1,12 @@
+<% provide :title, "Thêm Ảnh" %>
+<div class="home">
+<%= render "static_pages/header" %>
+<h2>Thêm Ảnh</h2>
+<%= form_for :photomoment, url: {action: :create, controller: :photomoments}, method: :post do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+    <%= f.label :image %>
+    <%= f.file_field :image %><br>
+    <%= f.submit "Thêm Ảnh", class: "btn btn-primary" %>
+<% end %>
+</div>
