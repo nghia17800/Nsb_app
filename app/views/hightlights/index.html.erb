@@ -1,0 +1,26 @@
+<% provide :title, "Hightlight" %>
+<div class="home">
+  <%= render "static_pages/header" %>
+  <div class="row">
+    <div class="col-sm-7">
+        <h2>Hightlight of NSB</h2>
+    </div>
+    <div class="col-sm-5">
+      <%= search_form_for @q, url: hightlights_path, method: :get do |f| %>
+        <%= f.text_field :name_cont, placeholder: "Tiêu đề", id: "input-player" %>
+        <%= button_tag( :class => "button_green") do %>
+          <i class="fa fa-search" aria-hidden="true"></i></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <% @hightlights.each do |hightlight| %>
+    <div class="polaroid">
+      <%= video_tag hightlight.video_url.to_s, controls: true %>
+      <div class="name-photo">
+      <%= hightlight.name %>
+      </div>
+    </div>
+    <% end %>
+  <p><%= will_paginate @hightlights %></p>
+</div>
