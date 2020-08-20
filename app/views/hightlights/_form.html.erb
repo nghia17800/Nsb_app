@@ -1,0 +1,19 @@
+<%= form_with(model: hightlight, local: true) do |f| %>
+  <% if hightlight.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hightlight.errors.count, "error") %> prohibited this hightlight from being saved:</h2>
+      <ul>
+        <% hightlight.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+    <%= f.label :video %>
+    <%= f.file_field :video %><br>
+    <%= f.submit "Thêm Video", class: "btn btn-primary" %>
+  <div class="actions">
+  </div>
+<% end %>

@@ -6,7 +6,7 @@
     <ul>
       <li><%= link_to "Trang chủ", root_path %></li>
       <li><%= link_to "Hình Ảnh", photomoments_path %>
-      <li><%= link_to "Hightlight", "#" %></li>
+      <li><%= link_to "Hightlight", hightlights_path %></li>
       <% if user_signed_in? %>
         <li><%= link_to "Tài Khoản", user_path(current_user) %></li>
         <li><%= link_to "Đăng Xuất", destroy_user_session_path %></li>

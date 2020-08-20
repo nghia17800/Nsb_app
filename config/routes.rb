@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :hightlights
   devise_for :users
   resources :users
   resources :photomoments
