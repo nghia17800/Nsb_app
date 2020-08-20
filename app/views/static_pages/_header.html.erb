@@ -1,17 +1,12 @@
 <div class="header">
   <%= link_to root_path do %>
-     <%= image_tag "http://r73.cooltext.com/d.php?renderid=360101678520203&extension=png" %>
+     <%= image_tag "http://r52.cooltext.com/d.php?renderid=360192585945242&extension=png" %>
   <% end %>
   <div id="menu">
     <ul>
       <li><%= link_to "Trang chủ", root_path %></li>
-      <li><%= link_to "Tổng hợp", "#" %>
-        <ul class="sub-menu">
-          <li><%= link_to "Hình Ảnh", "#" %>
-          <li><%= link_to "LiveStream", "#" %>
-          <li><%= link_to "Hightlight", "#" %>
-        </ul>
-      </li>
+      <li><%= link_to "Hình Ảnh", photomoments_path %>
+      <li><%= link_to "Hightlight", "#" %></li>
       <% if user_signed_in? %>
         <li><%= link_to "Tài Khoản", user_path(current_user) %></li>
         <li><%= link_to "Đăng Xuất", destroy_user_session_path %></li>

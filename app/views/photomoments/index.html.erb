@@ -1,0 +1,26 @@
+<% provide :title, "Photomoment" %>
+<div class="home">
+  <%= render "static_pages/header" %>
+  <div class="row">
+    <div class="col-sm-7">
+        <h2>Photo Moments Of NSB</h2>
+    </div>
+    <div class="col-sm-5">
+      <%= search_form_for @q, url: photomoments_path, method: :get do |f| %>
+        <%= f.text_field :name_cont, placeholder: "Tiêu đề", id: "input-player" %>
+        <%= button_tag( :class => "button_green") do %>
+          <i class="fa fa-search" aria-hidden="true"></i></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <% @photomoments.each do |photomoment| %>
+    <div class="polaroid">
+      <%= image_tag(photomoment.image.url) %>
+      <div class="name-photo">
+        <%= photomoment.name %>
+      </div>
+    </div>
+  <% end %>
+  <p><%= will_paginate @photomoments %></p>
+</div>
